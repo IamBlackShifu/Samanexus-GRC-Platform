@@ -1,0 +1,441 @@
+.page {
+  min-height: 100vh;
+  background: #f4f7fc;
+  color: #17243b;
+}
+
+.topbar {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  background: #172f57;
+  border-bottom: 1px solid #dce4f0;
+}
+
+.brand {
+  color: white;
+  text-decoration: none;
+}
+
+.context {
+  color: #a9bbd4;
+  font-size: 11px;
+}
+
+.layout {
+  width: min(1080px, calc(100% - 64px));
+  display: grid;
+  grid-template-columns: minmax(280px, .8fr) minmax(480px, 1.2fr);
+  gap: 7vw;
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.aside {
+  padding-top: 8px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 70px;
+  color: #0e7490;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.eyebrow {
+  margin: 0 0 7px;
+  color: #0e7490;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.aside h1 {
+  max-width: 390px;
+  margin: 0;
+  color: #172f57;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -.05em;
+}
+
+.aside > p:not(.eyebrow) {
+  max-width: 370px;
+  margin: 17px 0 0;
+  color: #75839a;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.setupNote {
+  display: flex;
+  gap: 12px;
+  max-width: 360px;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid #dce4f0;
+}
+
+.setupNote > span {
+  color: #f5a623;
+  font-size: 20px;
+}
+
+.setupNote strong,
+.setupNote small {
+  display: block;
+}
+
+.setupNote strong {
+  color: #172f57;
+  font-size: 11px;
+}
+
+.setupNote small {
+  margin-top: 5px;
+  color: #75839a;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.panel {
+  min-height: 540px;
+  padding: 30px 34px;
+  border: 1px solid #dce4f0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 14px 38px #213d6812;
+}
+
+.stepper {
+  display: flex;
+  gap: 0;
+  margin-bottom: 43px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 7px;
+  color: #a4b0c2;
+  font-size: 10px;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  margin: 0 8px;
+  background: #e4eaf2;
+}
+
+.step span {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #dce4f0;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.step.complete {
+  color: #0e7490;
+}
+
+.step.complete span {
+  border-color: #a7d8df;
+  background: #e5f4f5;
+  color: #0e7490;
+}
+
+.step.current {
+  color: #172f57;
+  font-weight: 800;
+}
+
+.step.current span {
+  border-color: #f5a623;
+  background: #f5a623;
+  color: #172f57;
+}
+
+.formStep h2,
+.successState h2 {
+  margin: 0;
+  color: #172f57;
+  font-size: 24px;
+  letter-spacing: -.04em;
+}
+
+.formIntro {
+  margin: 8px 0 27px;
+  color: #75839a;
+  font-size: 12px;
+}
+
+.formStep label {
+  display: block;
+  margin-bottom: 18px;
+  color: #50627d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.formStep input,
+.formStep select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 7px;
+  padding: 0 11px;
+  border: 1px solid #dce4f0;
+  border-radius: 6px;
+  outline: none;
+  background: white;
+  color: #172f57;
+  font-size: 12px;
+}
+
+.formStep input:focus,
+.formStep select:focus {
+  border-color: #0e7490;
+  box-shadow: 0 0 0 3px #0e74901c;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.frameworkPicker {
+  display: grid;
+  gap: 10px;
+}
+
+.frameworkOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce4f0;
+  border-radius: 7px;
+  background: white;
+  text-align: left;
+}
+
+.frameworkOption:hover,
+.frameworkOption.selected {
+  border-color: #86c5ce;
+  background: #f3fbfc;
+}
+
+.frameworkCode {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 32px;
+  border-radius: 5px;
+  background: #edf2f8;
+  color: #172f57;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.frameworkOption.selected .frameworkCode {
+  background: #0e7490;
+  color: white;
+}
+
+.frameworkOption strong,
+.frameworkOption small {
+  display: block;
+}
+
+.frameworkOption strong {
+  color: #172f57;
+  font-size: 11px;
+}
+
+.frameworkOption small {
+  margin-top: 4px;
+  color: #75839a;
+  font-size: 10px;
+}
+
+.checkmark {
+  margin-left: auto;
+  color: #0e7490;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.reviewList {
+  border-top: 1px solid #dce4f0;
+}
+
+.reviewList > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.reviewList span {
+  color: #75839a;
+  font-size: 11px;
+}
+
+.reviewList strong {
+  color: #172f57;
+  font-size: 11px;
+  text-align: right;
+}
+
+.securityCallout {
+  display: flex;
+  gap: 11px;
+  margin-top: 22px;
+  padding: 13px;
+  border-radius: 7px;
+  background: #eef8f7;
+  color: #0e7490;
+}
+
+.securityCallout > span {
+  font-size: 19px;
+}
+
+.securityCallout strong {
+  display: block;
+  color: #166979;
+  font-size: 11px;
+}
+
+.securityCallout p {
+  margin: 4px 0 0;
+  color: #4f7e86;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.formError {
+  margin-top: 17px;
+  padding: 10px 12px;
+  border-left: 3px solid #c75045;
+  border-radius: 4px;
+  background: #fff0ee;
+  color: #a83e35;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.successState {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 34px 8px;
+}
+
+.successMark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background: #e2f5e9;
+  color: #21834a;
+  font-size: 24px;
+}
+
+.successState > p:not(.eyebrow) {
+  max-width: 390px;
+  margin: 12px 0 27px;
+  color: #75839a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .context {
+    display: none;
+  }
+
+  .layout {
+    display: block;
+    width: calc(100% - 32px);
+    padding: 30px 0;
+  }
+
+  .aside {
+    padding: 0 5px 28px;
+  }
+
+  .backLink {
+    margin-bottom: 36px;
+  }
+
+  .aside h1 {
+    font-size: 30px;
+  }
+
+  .setupNote {
+    margin-top: 28px;
+  }
+
+  .panel {
+    min-height: 0;
+    padding: 24px 18px;
+  }
+
+  .stepper {
+    margin-bottom: 30px;
+  }
+
+  .step small {
+    display: none;
+  }
+
+  .step:not(:last-child)::after {
+    margin: 0 5px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .reviewList > div {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .reviewList strong {
+    text-align: left;
+  }
+}

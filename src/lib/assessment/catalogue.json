@@ -1,0 +1,289 @@
+{
+  "version": "samanexus-danzell-preparation-2026.1",
+  "label": "Cyber Essentials preparation",
+  "schemeVersion": "Danzell 2026",
+  "kind": "preparation",
+  "sourceUrl": "https://iasme.co.uk/cyber-essentials/preview-the-self-assessment-questions-for-cyber-essentials/",
+  "limitations": "This Samanexus preparation checklist covers selected technical checks. Complete the official IASME questionnaire with your assessor for certification.",
+  "questions": [
+    {
+      "reference": "SN-SCOPE-01",
+      "domain": "Scope",
+      "title": "Describe the organisation and assets being assessed.",
+      "type": "text",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false
+    },
+    {
+      "reference": "SN-SCOPE-02",
+      "domain": "Scope",
+      "title": "Does the organisation use cloud services?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false
+    },
+    {
+      "reference": "SN-SCOPE-03",
+      "domain": "Scope",
+      "title": "List the cloud services used.",
+      "type": "text",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "when": {
+        "reference": "SN-SCOPE-02",
+        "values": [
+          true
+        ]
+      }
+    },
+    {
+      "reference": "SN-FW-01",
+      "domain": "Firewalls",
+      "title": "Are in-scope internet connections protected by firewalls?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-FW-02",
+      "domain": "Firewalls",
+      "title": "Have default firewall administrator credentials been changed?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-FW-03",
+      "domain": "Firewalls",
+      "title": "Are unnecessary inbound firewall rules removed?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-CONFIG-01",
+      "domain": "Secure configuration",
+      "title": "Is unnecessary software removed or disabled?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-CONFIG-02",
+      "domain": "Secure configuration",
+      "title": "Are unused accounts removed or disabled?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-CONFIG-03",
+      "domain": "Secure configuration",
+      "title": "Is unauthorised automatic file execution disabled?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-UPDATE-01",
+      "domain": "Security updates",
+      "title": "Is in-scope software licensed and supported?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-UPDATE-02",
+      "domain": "Security updates",
+      "title": "Are high-risk or critical OS and firmware fixes applied within 14 days?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": true,
+      "sourceReference": "A6.4",
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-UPDATE-03",
+      "domain": "Security updates",
+      "title": "Are high-risk or critical application fixes applied within 14 days?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": true,
+      "sourceReference": "A6.5",
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-ACCESS-01",
+      "domain": "User access",
+      "title": "Are administrative tasks performed using separate accounts?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-ACCESS-02",
+      "domain": "User access",
+      "title": "Is MFA enabled for administrators on cloud services that offer it?",
+      "type": "boolean",
+      "guidance": "List any cloud services that do not offer MFA in your scope answer and discuss them with your assessor.",
+      "critical": true,
+      "sourceReference": "A7.16",
+      "when": {
+        "reference": "SN-SCOPE-02",
+        "values": [
+          true
+        ]
+      },
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-ACCESS-03",
+      "domain": "User access",
+      "title": "Is MFA enabled for users on cloud services that offer it?",
+      "type": "boolean",
+      "guidance": "List any cloud services that do not offer MFA in your scope answer and discuss them with your assessor.",
+      "critical": true,
+      "sourceReference": "A7.17",
+      "when": {
+        "reference": "SN-SCOPE-02",
+        "values": [
+          true
+        ]
+      },
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-MALWARE-01",
+      "domain": "Malware protection",
+      "title": "Which malware protection approach is used?",
+      "type": "choice",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "choices": [
+        {
+          "value": "antimalware",
+          "label": "Anti-malware"
+        },
+        {
+          "value": "allowlisting",
+          "label": "Application allowlisting"
+        },
+        {
+          "value": "both",
+          "label": "Both"
+        },
+        {
+          "value": "none",
+          "label": "Neither"
+        }
+      ],
+      "passValues": [
+        "antimalware",
+        "allowlisting",
+        "both"
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-MALWARE-02",
+      "domain": "Malware protection",
+      "title": "Is anti-malware protection kept current?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "when": {
+        "reference": "SN-MALWARE-01",
+        "values": [
+          "antimalware",
+          "both"
+        ]
+      },
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-MALWARE-03",
+      "domain": "Malware protection",
+      "title": "Are malicious websites blocked?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "when": {
+        "reference": "SN-MALWARE-01",
+        "values": [
+          "antimalware",
+          "both"
+        ]
+      },
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    },
+    {
+      "reference": "SN-MALWARE-04",
+      "domain": "Malware protection",
+      "title": "Are unsigned applications restricted?",
+      "type": "boolean",
+      "guidance": "Record the current position across your agreed scope. Add a note explaining how you checked it.",
+      "critical": false,
+      "when": {
+        "reference": "SN-MALWARE-01",
+        "values": [
+          "allowlisting",
+          "both"
+        ]
+      },
+      "passValues": [
+        true
+      ],
+      "remediation": "Confirm the gap with your IT lead, make the required change and record how it was verified across the assessment scope."
+    }
+  ]
+}
